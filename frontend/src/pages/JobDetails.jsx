@@ -17,12 +17,12 @@ const JobDetails = () => {
   const [message, setMessage] = useState("");
   const [sending, setSending] = useState(false);
 
-  // ✅ MATCH IA
+  // MATCH IA
   const [match, setMatch] = useState(null);
   const [matchLoading, setMatchLoading] = useState(false);
   const [matchError, setMatchError] = useState("");
 
-  // ✅ helper: normaliser src image
+  //  helper: normaliser src image
   const normalizeImgSrc = (val) => {
     if (!val) return null;
     if (typeof val === "string" && val.startsWith("data:image")) return val;

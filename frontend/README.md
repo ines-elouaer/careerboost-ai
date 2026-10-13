@@ -1,16 +1,39 @@
-# React + Vite
+# CareerBoost AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description du projet
+CareerBoost AI est une plateforme web de gestion de candidatures et de recrutement,
+développée avec la stack MERN (MongoDB, Express, React, Node.js).
 
-Currently, two official plugins are available:
+Elle permet :
+- aux candidats de créer un profil professionnel,
+- de consulter des offres d’emploi,
+- de postuler et suivre leurs candidatures,
+- aux recruteurs de publier des offres,
+- de gérer les candidatures reçues,
+- et d’utiliser un système de matching intelligent basé sur les compétences.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Technologies utilisées
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- React.js (Vite)
+- React Router
+- Axios
+- CSS personnalisé
 
-## Expanding the ESLint configuration
+### Backend
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JWT (authentification)
+- Architecture MVC
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Intelligence Artificielle
+- Matching local basé sur la comparaison des compétences
+- Génération de contenu avec fallback local (sans API payante)
+
+---
+
+
+
