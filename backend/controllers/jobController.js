@@ -26,9 +26,7 @@ const createJob = asyncHandler(async (req, res) => {
   res.status(201).json(job);
 });
 
-// @desc    Get all active jobs
-// @route   GET /api/jobs
-// @access  Public
+
 const getJobs = asyncHandler(async (req, res) => {
   const jobs = await JobOffer.find({ isActive: true })
     .populate("recruiter", "username email")
@@ -36,9 +34,7 @@ const getJobs = asyncHandler(async (req, res) => {
   res.json(jobs);
 });
 
-// @desc    Get job by id
-// @route   GET /api/jobs/:id
-// @access  Public
+
 const getJobById = asyncHandler(async (req, res) => {
   const job = await JobOffer.findById(req.params.id)
     .populate("recruiter", "username email")

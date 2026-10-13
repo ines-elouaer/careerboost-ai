@@ -1,4 +1,4 @@
-// backend/server.js
+
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -18,14 +18,11 @@ const notificationRoutes = require("./routes/notificationRoutes");
 
 const app = express();
 
-// ✅ Debug (tu peux enlever après)
-// console.log("PORT =", process.env.PORT);
+
 console.log("GEMINI_API_KEY =", process.env.GEMINI_API_KEY);
 
-// ✅ DB
 connectDB();
 
-// ✅ CORS (avant les routes)
 app.use(
   cors({
     origin: "http://localhost:5173",
@@ -35,16 +32,15 @@ app.use(
   })
 );
 
-// ✅ Body parsers
+
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
-
-// ✅ Route test
+// test
 app.get("/", (req, res) => {
   res.json({ message: "CareerBoost AI API is running" });
 });
 
-// ✅ API Routes
+
 app.use("/api/auth", authRoutes);
 app.use("/api/ai", aiRoutes);
 app.use("/api/profiles", profileRoutes);
@@ -54,10 +50,10 @@ app.use("/api/jobs", jobRoutes);
 app.use("/api/applications", applicationRoutes);
 app.use("/api/notifications", notificationRoutes);
 
-// ✅ Errors (TOUJOURS à la fin)
+// 
 app.use(notFound);
 app.use(errorHandler);
 
-// ✅ Start server
+// Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
